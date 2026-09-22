@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/esios-red-electrica/main/json-schema/esios-red-electrica-get-archives-archiveid-archiveidid-response-schema.json",
+  "title": "GetArchivesArchiveidArchiveididResponse",
+  "x-generated": "2026-09-22",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/esios-red-electrica-archive-openapi-generated.yml#/components/schemas/GetArchivesArchiveidArchiveididResponse",
+  "type": "object",
+  "properties": {
+    "Indicadores": {
+      "type": "string"
+    },
+    "31/03/2014": {
+      "type": "string"
+    },
+    "01/04/2014": {
+      "type": "string"
+    }
+  }
+}

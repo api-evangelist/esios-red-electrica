@@ -19,13 +19,15 @@ vendors:
 - vendor: imperva
   name: Imperva
   area: cdn
-  host: www.esios.ree.es
+  host: api.esios.ree.es
   evidence: cname:incapdns.net
   signal: cname
   confidence: high
   kin_score: []
 checked:
-- 'docs-platform: no-docs-host'
+- 'docs-platform: custom'
+- api.esios.ree.es (APIReference)
+- www.esios.ree.es (GettingStarted)
 - www.esios.ree.es (Website)
 - www.esios.ree.es (Documentation)
 - www.esios.ree.es (Support)

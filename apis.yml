@@ -1,38 +1,47 @@
 aid: esios-red-electrica
-
 name: Red Electrica (e-sios)
-
-description: 'Red Electrica (e-sios) operates the Spanish electricity market data platform ESIOS, providing transparent access to generation, consumption, market prices, demand forecasts, and system operation metrics. The service offers extensive datasets through a public API, supporting developers, analysts, and energy stakeholders in building applications, visualizations, and research tools. It emphasizes open data, regulatory compliance, and real‑time updates, fostering innovation in the energy sector.'
-
+description: Red Electrica (e-sios) operates the Spanish electricity market data platform ESIOS, providing transparent access to generation, consumption,
+  market prices, demand forecasts, and system operation metrics. The service offers extensive datasets through a public API, supporting developers,
+  analysts, and energy stakeholders in building applications, visualizations, and research tools. It emphasizes open data, regulatory compliance,
+  and real‑time updates, fostering innovation in the energy sector.
 url: https://raw.githubusercontent.com/api-evangelist/esios-red-electrica/refs/heads/main/apis.yml
-
 x-type: company
-
 x-source: harvest:energy
-
 x-tier: profiled
 x-tier-reason: enrichment pass 2026-09-22 (modular-v1; was harvest)
-
 specificationVersion: '0.20'
-
 created: '2026-09-22'
-
 modified: '2026-09-22'
-
 tags:
 - Company
 - Energy
 - Data
 - API
 - Spain
-
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-
 common:
+- type: Spectral
+  url: rules/esios-red-electrica-rules.yml
+- type: JSONLD
+  url: json-ld/esios-red-electrica-context.jsonld
+- type: Vocabulary
+  url: vocabulary/esios-red-electrica-vocabulary.yml
+- type: DataModel
+  url: data-model/esios-red-electrica-data-model.yml
+- type: Conformance
+  url: conformance/esios-red-electrica-conformance.yml
+- type: APIReference
+  url: https://api.esios.ree.es
+- type: GettingStarted
+  url: https://www.esios.ree.es/es/token
+- type: APIReference
+  url: https://api.esios.ree.es
+- type: GettingStarted
+  url: https://www.esios.ree.es/es/token
 - type: Security
   url: security/esios-red-electrica-vulnerability-disclosure.yml
 - type: SecurityTxt
@@ -55,22 +64,58 @@ common:
   url: https://www.esios.ree.es/es/ayuda-preguntas-frecuentes
 - type: Contact
   url: https://www.esios.ree.es/es/contacto
-
-apis: []
-
+- type: APIReference
+  url: https://api.esios.ree.es
+- type: GettingStarted
+  url: https://www.esios.ree.es/es/token
+- type: APIReference
+  url: https://api.esios.ree.es
+- type: GettingStarted
+  url: https://www.esios.ree.es/es/token
+apis:
+- aid: esios-red-electrica:archive-api
+  name: Red Electrica (e-sios) archive API
+  description: 'Red Electrica (e-sios) archive API as documented publicly: 3 operations. Contract generated from the documentation by API Evangelist
+    (2026-09-22); not the provider''s own document.'
+  humanURL: https://api.esios.ree.es/doc/archive
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/esios-red-electrica-archive-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/esios-red-electrica-get-calculator-data72-response-schema.json
+  - type: JSONSchema
+    url: json-schema/esios-red-electrica-get-archives-response-schema.json
+  - type: JSONSchema
+    url: json-schema/esios-red-electrica-get-archives-archiveid-archiveidid-response-schema.json
+- aid: esios-red-electrica:content-api
+  name: Red Electrica (e-sios) content API
+  description: 'Red Electrica (e-sios) content API as documented publicly: 3 operations. Contract generated from the documentation by API Evangelist
+    (2026-09-22); not the provider''s own document.'
+  humanURL: https://api.esios.ree.es/doc/content
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/esios-red-electrica-content-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/esios-red-electrica-get-es-eid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/esios-red-electrica-get-contents-contentid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/esios-red-electrica-get-es-eid-content3-response-schema.json
 x-coverage:
   state: unreadable
   reason: no-machine-readable-spec
   detail: The developer portal returns HTML pages and a 403 for /openapi.json, providing no machine‑readable specification.
   evidence:
-    - url: https://www.esios.ree.es/developer/api
-      status: 200
-    - url: https://api.esios.ree.es/openapi.json
-      status: 403
+  - url: https://www.esios.ree.es/developer/api
+    status: 200
+  - url: https://api.esios.ree.es/openapi.json
+    status: 403
   checked: 2026-09-22
 x-enrichment:
   date: '2026-09-22'
   status: enriched
-  artifacts_added: 6
+  artifacts_added: 20
   pass: modular-v1
   engine: identity=local,contract=local,surfaces=local,docs=local

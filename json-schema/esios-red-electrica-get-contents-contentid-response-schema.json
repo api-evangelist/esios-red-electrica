@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/esios-red-electrica/main/json-schema/esios-red-electrica-get-contents-contentid-response-schema.json",
+  "title": "GetContentsContentidResponse",
+  "x-generated": "2026-09-22",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/esios-red-electrica-content-openapi-generated.yml#/components/schemas/GetContentsContentidResponse",
+  "type": "object",
+  "properties": {
+    "content": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "slug": {
+          "type": "string"
+        },
+        "metadata": {
+          "type": "string"
+        },
+        "body": {
+          "type": "string"
+        },
+        "slug_inverse": {
+          "type": "object",
+          "properties": {
+            "slug_en": {
+              "type": "string"
+            }
+          }
+        },
+        "id": {
+          "type": "integer"
+        },
+        "published_status": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "published_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "expires_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "sticky": {
+          "type": "boolean"
+        },
+        "permalink": {
+          "type": "string"
+        },
+        "media": {
+          "type": "array",
+          "items": {}
+        },
+        "taxonomy_terms": {
+          "type": "array",
+          "items": {}
+        },
+        "vocabularies": {
+          "type": "array",
+          "items": {}
+        }
+      }
+    },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "cache_date": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    }
+  }
+}

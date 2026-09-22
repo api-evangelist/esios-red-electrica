@@ -1,0 +1,207 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/esios-red-electrica/main/json-schema/esios-red-electrica-get-es-documentations-response-schema.json",
+  "title": "GetEsDocumentationsResponse",
+  "x-generated": "2026-09-22",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/esios-red-electrica-content-openapi-generated.yml#/components/schemas/GetEsDocumentationsResponse",
+  "type": "object",
+  "properties": {
+    "contents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "slug": {
+            "type": "string"
+          },
+          "metadata": {
+            "type": "string"
+          },
+          "body": {
+            "type": "string"
+          },
+          "slug_inverse": {
+            "type": "object",
+            "properties": {
+              "slug_en": {
+                "type": "string"
+              }
+            }
+          },
+          "id": {
+            "type": "integer"
+          },
+          "published_status": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "expires_at": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "sticky": {
+            "type": "boolean"
+          },
+          "permalink": {
+            "type": "string"
+          },
+          "media": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "uri": {
+                  "type": "string"
+                },
+                "id": {
+                  "type": "integer"
+                },
+                "created_at": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "updated_at": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "media_type": {
+                  "type": "string"
+                },
+                "youtube_url": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "document_value_file_name": {
+                  "type": "string"
+                },
+                "document_value_content_type": {
+                  "type": "string"
+                },
+                "document_value_file_size": {
+                  "type": "integer"
+                },
+                "photo_value_file_name": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "photo_value_content_type": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "photo_value_file_size": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "embed_path": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "download": {
+                  "type": "string"
+                },
+                "photo_thumb": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "photo_medium": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "photo_original": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              }
+            }
+          },
+          "taxonomy_terms": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id_taxonomy_term": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "vocabulary_id": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "vocabularies": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id_vocabulary": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "size": {
+          "type": "integer"
+        },
+        "cache_date": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    }
+  }
+}

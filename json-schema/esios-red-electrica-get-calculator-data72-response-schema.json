@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/esios-red-electrica/main/json-schema/esios-red-electrica-get-calculator-data72-response-schema.json",
+  "title": "GetCalculatorData72Response",
+  "x-generated": "2026-09-22",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/esios-red-electrica-archive-openapi-generated.yml#/components/schemas/GetCalculatorData72Response",
+  "type": "object",
+  "properties": {
+    "archive_values": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "datetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "json_data": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "Indicadores": {
+                  "type": "string"
+                },
+                "02/04/2014": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

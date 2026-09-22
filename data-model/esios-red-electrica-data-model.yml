@@ -1,0 +1,18 @@
+generated: '2026-09-22'
+method: derived
+generator: derive-data-model.py
+source:
+- openapi/_ae-authored/esios-red-electrica-archive-openapi-generated.yml
+notation: has_one = property $ref; has_many = array of $ref; belongs_to = <entity>_id field
+summary:
+  entities: 3
+  entities_in_spec: 3
+  relationships: 0
+entities:
+- name: GetArchivesArchiveidArchiveididResponse
+  fields: 3
+- name: GetArchivesResponse
+  fields: 2
+- name: GetCalculatorData72Response
+  fields: 4
+relationships: []

@@ -1,0 +1,25 @@
+generated: '2026-09-22'
+method: derived
+generator: derive-vocabulary.py
+source: openapi/_ae-authored/esios-red-electrica-archive-openapi-generated.yml
+vocabulary:
+  name: Red Electrica (e-sios) Domain Vocabulary
+  description: 'Terms declared by Red Electrica (e-sios)''s own API contract: its resource groups, objects and enumerations, with the contract''s
+    definitions. Derived, not authored.'
+  version: '2026-09-22'
+  terms:
+  - term: GetArchivesResponse
+    definition: 'Object declared by the contract with fields: archives, meta.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/esios-red-electrica-archive-openapi-generated.yml#/components/schemas/GetArchivesResponse
+  - term: GetArchivesArchiveidArchiveididResponse
+    definition: 'Object declared by the contract with fields: Indicadores, 31/03/2014, 01/04/2014.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/esios-red-electrica-archive-openapi-generated.yml#/components/schemas/GetArchivesArchiveidArchiveididResponse
+  - term: GetCalculatorData72Response
+    definition: 'Object declared by the contract with fields: data, archive_values, datetime, json_data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/esios-red-electrica-archive-openapi-generated.yml#/components/schemas/GetCalculatorData72Response
