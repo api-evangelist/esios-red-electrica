@@ -1,23 +1,76 @@
 aid: esios-red-electrica
+
 name: Red Electrica (e-sios)
-description: 'Red Electrica (e-sios) is a company surfaced via the API Evangelist harvest backlog (source:
-  energy) and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Red Electrica (e-sios) operates the Spanish electricity market data platform ESIOS, providing transparent access to generation, consumption, market prices, demand forecasts, and system operation metrics. The service offers extensive datasets through a public API, supporting developers, analysts, and energy stakeholders in building applications, visualizations, and research tools. It emphasizes open data, regulatory compliance, and real‑time updates, fostering innovation in the energy sector.'
+
 url: https://raw.githubusercontent.com/api-evangelist/esios-red-electrica/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:energy
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-22 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-22'
+
 modified: '2026-09-22'
+
 tags:
 - Company
-apis: []
+- Energy
+- Data
+- API
+- Spain
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Security
+  url: security/esios-red-electrica-vulnerability-disclosure.yml
+- type: SecurityTxt
+  url: well-known/esios-red-electrica-security.txt
+- type: WellKnown
+  url: well-known/esios-red-electrica-well-known.yml
+- type: Vendors
+  url: vendors/esios-red-electrica-vendors.yml
+- type: VulnerabilityDisclosure
+  url: security/esios-red-electrica-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/esios-red-electrica-domain-security.yml
 - type: Website
   url: https://www.esios.ree.es/
+- type: Documentation
+  url: https://www.esios.ree.es/es/documentacion
+- type: About
+  url: https://www.esios.ree.es/es/acerca-de-esios
+- type: Support
+  url: https://www.esios.ree.es/es/ayuda-preguntas-frecuentes
+- type: Contact
+  url: https://www.esios.ree.es/es/contacto
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: The developer portal returns HTML pages and a 403 for /openapi.json, providing no machine‑readable specification.
+  evidence:
+    - url: https://www.esios.ree.es/developer/api
+      status: 200
+    - url: https://api.esios.ree.es/openapi.json
+      status: 403
+  checked: 2026-09-22
+x-enrichment:
+  date: '2026-09-22'
+  status: enriched
+  artifacts_added: 6
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
