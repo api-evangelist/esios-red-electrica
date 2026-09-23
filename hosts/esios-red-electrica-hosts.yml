@@ -1,0 +1,74 @@
+generated: '2026-09-22'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 3
+  own: 3
+  other_domain: 0
+  platform: 0
+  roles:
+  - api
+  - docs
+  - website
+hosts:
+- host: api.esios.ree.es
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - site-links
+  - namespace-probe
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - APIReference
+  serves:
+  - docs
+  - cdn
+  title: API e·sios Documentation
+  status: 200
+  vendor: imperva
+  registrable_domain: ree.es
+  role: docs
+  relation: own
+  last_probed: '2026-09-22'
+  probe_paths: 4
+  probe_verdict: gated
+- host: api.ree.es
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: ree.es
+  role: api
+  relation: own
+  last_probed: '2026-09-22'
+  probe_paths: 7
+  probe_verdict: dead
+- host: www.esios.ree.es
+  found_by:
+  - pointer
+  - probed
+  - docs-index
+  - contract-discovery
+  - well-known
+  types:
+  - GettingStarted
+  - Website
+  - Documentation
+  - About
+  - Support
+  - Contact
+  serves:
+  - docs
+  registrable_domain: ree.es
+  role: website
+  relation: own
+probed:
+  date: '2026-09-22'
+  hosts: 2
+  answers: 0
+  gated: 1
+  dead: 1
