@@ -1,0 +1,127 @@
+openapi: 3.2.0
+info:
+  title: Red Electrica (e-sios) archive Archives API
+  version: '2026-09-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-22: 3 operation(s) read from 3 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; archiveIdId has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 2
+    documentation: 8
+    pages-with-code: 40
+    pages-read: 40
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://api.esios.ree.es/doc/archive/download_archive.html
+  - https://api.esios.ree.es/doc/archive/getting_a_list_of_archives.html
+  - https://api.esios.ree.es/doc/archive/getting_json_data_for_calculations_by_id_archive,_start_date,_end_date.html
+  x-docs-section: archive
+security:
+- apiKey: []
+tags:
+- name: Archives
+paths:
+  /archives:
+    get:
+      operationId: get_archives
+      tags:
+      - Archives
+      summary: Getting a list of archives
+      description: GET /archives returns a JSON body containing an array of archives and meta information.
+      x-source: https://api.esios.ree.es/doc/archive/getting_a_list_of_archives.html
+      parameters:
+      - name: locale
+        in: query
+        required: false
+        schema:
+          type: string
+        description: 'Get translations for sources (es, en). Default language: es'
+      - name: taxonomy_terms
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Taxonomy terms associated with the archive
+      - name: vocabularies
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Vocabularies associated with the archive
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetArchivesResponse'
+      x-evidence:
+        kind: documentation
+  /archives/{archiveId}/{archiveIdId}:
+    get:
+      operationId: get_archives_archiveId_archiveIdId
+      tags:
+      - Archives
+      summary: GET /archives/{archiveId}/download
+      x-source: https://api.esios.ree.es/doc/archive/download_archive.html
+      parameters:
+      - name: archiveId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: archiveIdId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetArchivesArchiveidArchiveididResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl
+
+          Download link: https://api.esios.ree.es/archives/87/download
+
+          Response
+
+          Headers
+
+          Status
+
+          200'
+        collapsed_from: 2 example path(s) differing only at archiveIdId
+components:
+  schemas:
+    GetArchivesResponse:
+      type: object
+      properties:
+        archives:
+          type: array
+          description: List of archive objects
+        meta:
+          type: object
+          description: Metadata about the response
+    GetArchivesArchiveidArchiveididResponse:
+      type: object
+      properties:
+        Indicadores:
+          type: string
+        31/03/2014:
+          type: string
+        01/04/2014:
+          type: string
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: x-api-key

@@ -1,0 +1,23 @@
+{
+  "provider": "esios-red-electrica",
+  "sources": [
+    "_ae-authored/esios-red-electrica-archive-openapi-generated.yml",
+    "_ae-authored/esios-red-electrica-content-openapi-generated.yml"
+  ],
+  "outputs": [
+    "esios-red-electrica-archives-api-openapi.yml",
+    "esios-red-electrica-calculator-data-api-openapi.yml",
+    "esios-red-electrica-contents-api-openapi.yml",
+    "esios-red-electrica-es-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "esios-red-electrica-archive-openapi-generated.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "esios-red-electrica-content-openapi-generated.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: written (+4 apis, 4 total)"
+  ],
+  "skipped": []
+}

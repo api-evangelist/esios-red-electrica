@@ -1,0 +1,78 @@
+openapi: 3.2.0
+info:
+  title: Red Electrica (e-sios) archive Calculator Data API
+  version: '2026-09-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-22: 3 operation(s) read from 3 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; archiveIdId has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 2
+    documentation: 8
+    pages-with-code: 40
+    pages-read: 40
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://api.esios.ree.es/doc/archive/download_archive.html
+  - https://api.esios.ree.es/doc/archive/getting_a_list_of_archives.html
+  - https://api.esios.ree.es/doc/archive/getting_json_data_for_calculations_by_id_archive,_start_date,_end_date.html
+  x-docs-section: archive
+security:
+- apiKey: []
+tags:
+- name: Calculator Data
+paths:
+  /calculator-data/72:
+    get:
+      operationId: get_calculator_data_72
+      tags:
+      - Calculator Data
+      summary: Getting json data for calculations by id_archive, start_date, end_date
+      description: GET request to retrieve calculation data for archive id 72 within the specified date range.
+      x-source: https://api.esios.ree.es/doc/archive/getting_json_data_for_calculations_by_id_archive,_start_date,_end_date.html
+      parameters:
+      - name: start_date
+        in: query
+        required: false
+        schema:
+          type: string
+        description: A certain start_date to filter values by (iso8601 format)
+      - name: end_date
+        in: query
+        required: false
+        schema:
+          type: string
+        description: A certain end_date to filter values by (iso8601 format)
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCalculatorData72Response'
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    GetCalculatorData72Response:
+      type: object
+      properties:
+        data:
+          type: object
+          description: Root object containing archive values
+        archive_values:
+          type: array
+          description: List of archive value entries
+        datetime:
+          type: string
+          description: Timestamp of the entry
+        json_data:
+          type: array
+          description: Array of key‑value pairs for the calculation
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: x-api-key

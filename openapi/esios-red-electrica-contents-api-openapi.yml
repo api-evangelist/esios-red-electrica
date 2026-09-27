@@ -1,0 +1,72 @@
+openapi: 3.2.0
+info:
+  title: Red Electrica (e-sios) content Contents API
+  version: '2026-09-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-22: 3 operation(s) read from 3 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; archiveIdId has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 2
+    documentation: 8
+    pages-with-code: 40
+    pages-read: 40
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://api.esios.ree.es/doc/content/getting_a_list_of_documentations_with_media.html
+  - https://api.esios.ree.es/doc/content/getting_a_specific_documentations.html
+  - https://api.esios.ree.es/doc/content/getting_a_specific_static_pages_as_contents_url_part_by_id.html
+  x-docs-section: content
+security:
+- apiKey: []
+tags:
+- name: Contents
+paths:
+  /contents/{contentId}:
+    get:
+      operationId: get_contents_contentId
+      tags:
+      - Contents
+      summary: Getting a specific Static Pages as contents url part by ID
+      description: Retrieves the static page with ID 44227. Optional locale query parameter can be used to get translations.
+      x-source: https://api.esios.ree.es/doc/content/getting_a_specific_static_pages_as_contents_url_part_by_id.html
+      parameters:
+      - name: contentId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: locale
+        in: query
+        required: false
+        schema:
+          type: string
+        description: 'Get translations for sources (es, en). Default language: es'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetContentsContentidResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 6 example path(s) differing only at contentId
+components:
+  schemas:
+    GetContentsContentidResponse:
+      type: object
+      properties:
+        content:
+          type: object
+          description: Static page content
+        meta:
+          type: object
+          description: Metadata about the response
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: x-api-key

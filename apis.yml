@@ -16,6 +16,11 @@ tags:
 - Company
 - Energy
 - Data
+- Spain
+tags_raw:
+- Company
+- Energy
+- Data
 - API
 - Spain
 maintainers:
@@ -73,30 +78,85 @@ common:
 - type: GettingStarted
   url: https://www.esios.ree.es/es/token
 apis:
-- aid: esios-red-electrica:archive-api
-  name: Red Electrica (e-sios) archive API
-  description: 'Red Electrica (e-sios) archive API as documented publicly: 3 operations. Contract generated from the documentation by API Evangelist
-    (2026-09-22); not the provider''s own document.'
+- aid: esios-red-electrica:esios-red-electrica-archives-api
+  name: Red Electrica (e-sios) Archives API
+  description: The Archives API from Red Electrica (e-sios) — 2 operation(s) for archives.
   humanURL: https://api.esios.ree.es/doc/archive
+  tags:
+  - Archives
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/esios-red-electrica-archive-openapi-generated.yml
-    x-provenance: generated
+    url: openapi/esios-red-electrica-archives-api-openapi.yml
   - type: JSONSchema
     url: json-schema/esios-red-electrica-get-calculator-data72-response-schema.json
   - type: JSONSchema
     url: json-schema/esios-red-electrica-get-archives-response-schema.json
   - type: JSONSchema
     url: json-schema/esios-red-electrica-get-archives-archiveid-archiveidid-response-schema.json
-- aid: esios-red-electrica:content-api
-  name: Red Electrica (e-sios) content API
-  description: 'Red Electrica (e-sios) content API as documented publicly: 3 operations. Contract generated from the documentation by API Evangelist
-    (2026-09-22); not the provider''s own document.'
-  humanURL: https://api.esios.ree.es/doc/content
+  - type: JSONSchema
+    url: json-schema/esios-red-electrica-get-es-eid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/esios-red-electrica-get-contents-contentid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/esios-red-electrica-get-es-eid-content3-response-schema.json
+- aid: esios-red-electrica:esios-red-electrica-calculator-data-api
+  name: Red Electrica (e-sios) Calculator Data API
+  description: >-
+    The Calculator Data API from Red Electrica (e-sios) — 1 operation(s) for calculator data.
+  humanURL: https://api.esios.ree.es/doc/archive
+  tags:
+  - Calculator Data
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/esios-red-electrica-content-openapi-generated.yml
-    x-provenance: generated
+    url: openapi/esios-red-electrica-calculator-data-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/esios-red-electrica-get-calculator-data72-response-schema.json
+  - type: JSONSchema
+    url: json-schema/esios-red-electrica-get-archives-response-schema.json
+  - type: JSONSchema
+    url: json-schema/esios-red-electrica-get-archives-archiveid-archiveidid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/esios-red-electrica-get-es-eid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/esios-red-electrica-get-contents-contentid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/esios-red-electrica-get-es-eid-content3-response-schema.json
+- aid: esios-red-electrica:esios-red-electrica-contents-api
+  name: Red Electrica (e-sios) Contents API
+  description: The Contents API from Red Electrica (e-sios) — 1 operation(s) for contents.
+  humanURL: https://api.esios.ree.es/doc/archive
+  tags:
+  - Contents
+  properties:
+  - type: OpenAPI
+    url: openapi/esios-red-electrica-contents-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/esios-red-electrica-get-calculator-data72-response-schema.json
+  - type: JSONSchema
+    url: json-schema/esios-red-electrica-get-archives-response-schema.json
+  - type: JSONSchema
+    url: json-schema/esios-red-electrica-get-archives-archiveid-archiveidid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/esios-red-electrica-get-es-eid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/esios-red-electrica-get-contents-contentid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/esios-red-electrica-get-es-eid-content3-response-schema.json
+- aid: esios-red-electrica:esios-red-electrica-es-api
+  name: Red Electrica (e-sios) Es API
+  description: The Es API from Red Electrica (e-sios) — 2 operation(s) for es.
+  humanURL: https://api.esios.ree.es/doc/archive
+  tags:
+  - Es
+  properties:
+  - type: OpenAPI
+    url: openapi/esios-red-electrica-es-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/esios-red-electrica-get-calculator-data72-response-schema.json
+  - type: JSONSchema
+    url: json-schema/esios-red-electrica-get-archives-response-schema.json
+  - type: JSONSchema
+    url: json-schema/esios-red-electrica-get-archives-archiveid-archiveidid-response-schema.json
   - type: JSONSchema
     url: json-schema/esios-red-electrica-get-es-eid-response-schema.json
   - type: JSONSchema
