@@ -102,15 +102,6 @@ paths:
         collapsed_from: 2 example path(s) differing only at archiveIdId
 components:
   schemas:
-    GetArchivesResponse:
-      type: object
-      properties:
-        archives:
-          type: array
-          description: List of archive objects
-        meta:
-          type: object
-          description: Metadata about the response
     GetArchivesArchiveidArchiveididResponse:
       type: object
       properties:
@@ -120,6 +111,15 @@ components:
           type: string
         01/04/2014:
           type: string
+    GetArchivesResponse:
+      type: object
+      properties:
+        archives:
+          type: array
+          description: List of archive objects
+        meta:
+          type: object
+          description: Metadata about the response
   securitySchemes:
     apiKey:
       type: apiKey

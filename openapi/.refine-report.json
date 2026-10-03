@@ -17,7 +17,12 @@
     "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
     "esios-red-electrica-archive-openapi-generated.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
     "esios-red-electrica-content-openapi-generated.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "apis.yml register: written (+4 apis, 4 total)"
+    "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "esios-red-electrica-archives-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "esios-red-electrica-calculator-data-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "esios-red-electrica-contents-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "esios-red-electrica-es-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
