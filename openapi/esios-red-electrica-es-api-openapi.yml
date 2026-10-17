@@ -122,15 +122,6 @@ paths:
         collapsed_from: 6 example path(s) differing only at eId
 components:
   schemas:
-    GetEsEidContent3Response:
-      type: object
-      properties:
-        content:
-          type: object
-          description: Content object
-        meta:
-          type: object
-          description: Metadata object
     GetEsEidResponse:
       type: object
       properties:
@@ -140,6 +131,15 @@ components:
         meta:
           type: object
           description: Metadata about the response
+    GetEsEidContent3Response:
+      type: object
+      properties:
+        content:
+          type: object
+          description: Content object
+        meta:
+          type: object
+          description: Metadata object
   securitySchemes:
     apiKey:
       type: apiKey
